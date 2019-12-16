@@ -273,14 +273,14 @@ class Wcwidth {
     private static function _bisearch(ucs:Int, table:Array<Interval>, max:Int) : Int {
         var min = 0;
         var mid : Int;
-        if (ucs < table[0].first || ucs > table[max].last) return 0;
+        if (ucs < table[0].first || ucs > table[max].last) return false;
         while (max >= min) {
             mid = Std.int( (min + max) / 2 );
             if (ucs > table[mid].last) min = mid + 1;
             else if (ucs < table[mid].first) max = mid - 1;
-            else return 1;
+            else return true;
         }
-        return 0;
+        return false;
     }
 
 
