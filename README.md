@@ -11,20 +11,21 @@
  -------
  a   1  (3 spaces between a and 1)
  b   2  (3 spaces)
- 百  3  (2 spaces only)
+ 百  3  (2 spaces occupied only in a terminal with fixed-size font, not on github website however)
 ```
  
- In a terminal if you need alignment this can be a serious problem. 
- So wcwidth() to the rescue! Here's how:
- 
- wcwidth("x") returns 1.
- wcwidth("白") returns 2. 
- 
-Follows a verbatim of original Stack Overflow question where I found this.
+In a terminal if you need alignment this can be a serious problem. 
+wcwidth() comes to the rescue: 
+
+* wcwidth("x") returns 1,
+* wcwidth("白") returns 2. 
+
+At least that's the basic idea. Read below to discover why it sometimes return 0 or -1.
+
+Follows a verbatim of original Stack Overflow question where found this (
+https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters).
 
 # How to know the preferred display width (in columns) of Unicode characters?
-
-https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters
 
 Sounds like you're looking for something like wcwidth and wcswidth, defined in IEEE Std 1003.1-2001, but removed from ISO C:
 
