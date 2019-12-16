@@ -4,7 +4,7 @@ Following is a [Haxe](https://haxe.org) port of an implementation of wcwidth() a
  
 ## What is this used for?
 
-When you output characters in a Monospace font (e.g. in a Terminal)
+When you output characters in a so-called "monospace" font (e.g. in a Terminal)
 some character instead of occupying 1 character actually occupy 2!
 So trying to align this:
  
