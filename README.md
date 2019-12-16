@@ -32,11 +32,11 @@ https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-wi
 
 Sounds like you're looking for something like wcwidth and wcswidth, defined in IEEE Std 1003.1-2001, but removed from ISO C:
 
-    The `wcwidth()` function shall determine the number of column positions required for the wide character wc. The `wcwidth()` function shall either return 0 (if wc is a null wide-character code), or return the number of column positions to be occupied by the wide-character code wc, or return -1 (if wc does not correspond to a printable wide-character code).
+> The `wcwidth()` function shall determine the number of column positions required for the wide character wc. The `wcwidth()` function shall either return 0 (if wc is a null wide-character code), or return the number of column positions to be occupied by the wide-character code wc, or return -1 (if wc does not correspond to a printable wide-character code).
 
 **Markus Kuhn** wrote an open source version, [wcwidth.c](http://www.cl.cam.ac.uk/~mgk25/ucs/wcwidth.c), based on Unicode 5.0. It includes a description of the problem, and an acknowledgement of the lack of standards in the area:
 
-    In fixed-width output devices, Latin characters all occupy a single "cell" position of equal width, whereas ideographic CJK characters occupy two such cells. Interoperability between terminal-line applications and (teletype-style) character terminals using the UTF-8 encoding requires agreement on which character should advance the cursor by how many cell positions. No established formal standards exist at present on which Unicode character shall occupy how many cell positions on character terminals. These routines are a first attempt of defining such behavior based on simple rules applied to data provided by the Unicode Consortium. [...]
+> In fixed-width output devices, Latin characters all occupy a single "cell" position of equal width, whereas ideographic CJK characters occupy two such cells. Interoperability between terminal-line applications and (teletype-style) character terminals using the UTF-8 encoding requires agreement on which character should advance the cursor by how many cell positions. No established formal standards exist at present on which Unicode character shall occupy how many cell positions on character terminals. These routines are a first attempt of defining such behavior based on simple rules applied to data provided by the Unicode Consortium. [...]
 
 It implements the following rules:
 
