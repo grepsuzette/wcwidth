@@ -19,8 +19,8 @@ b   2  (3 spaces)
 In a terminal if you need alignment this can be a serious problem. 
 wcwidth() comes to the rescue: 
 
-* `wcwidth("x")` returns `1`,
-* `wcwidth("白")` returns `2`. 
+* `wcwidth("x".charCodeAt(0))` returns `1`,
+* `wcwidth("白").charCodeAt(0)` returns `2`. 
 
 At least that's the basic idea. 
 Read below to discover why it sometimes return `0` or even `-1`.
