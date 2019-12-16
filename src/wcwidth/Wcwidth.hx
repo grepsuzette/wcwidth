@@ -270,7 +270,7 @@ class Wcwidth {
     ];
 
     /* auxiliary function for binary search in interval table */
-    private static function _bisearch(ucs:Int, table:Array<Interval>, max:Int) : Int {
+    private static function _bisearch(ucs:Int, table:Array<Interval>, max:Int) : Bool {
         var min = 0;
         var mid : Int;
         if (ucs < table[0].first || ucs > table[max].last) return false;
