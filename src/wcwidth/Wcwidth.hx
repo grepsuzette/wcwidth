@@ -267,7 +267,7 @@ class Wcwidth {
         { first: 0x2667, last: 0x266A }, { first: 0x266C,  last: 0x266D }, { first: 0x266F, last: 0x266F },
         { first: 0x273D, last: 0x273D }, { first: 0x2776,  last: 0x277F }, { first: 0xE000, last: 0xF8FF },
         { first: 0xFFFD, last: 0xFFFD }, { first: 0xF0000, last: 0xFFFFD },{ first: 0x100000, last: 0x10FFFD }
-    };
+    ];
 
     /* auxiliary function for binary search in interval table */
     private static function _bisearch(ucs:Int, table:Array<Interval>, max:Int) : Int {
