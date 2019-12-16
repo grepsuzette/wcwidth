@@ -1,17 +1,17 @@
- Haxe port of an implementation of wcwidth() as provided by Markus Kuhn.
+Haxe port of an implementation of wcwidth() as provided by Markus Kuhn.
  
- Why is this used for?
+What is this used for?
 
- When you output characters in a Monospace font (e.g. in a Terminal)
- some character instead of occupying 1 character actually occupy 2!
- So trying to align this:
+When you output characters in a Monospace font (e.g. in a Terminal)
+some character instead of occupying 1 character actually occupy 2!
+So trying to align this:
  
 ```
- foo bar
- -------
- a   1  (3 spaces between a and 1)
- b   2  (3 spaces)
- 百  3  (2 spaces occupied only in a terminal with fixed-size font, not on github website however)
+foo bar
+-------
+a   1  (3 spaces between a and 1)
+b   2  (3 spaces)
+百  3  (2 spaces occupied only in a terminal with fixed-size font, not on github website however)
 ```
  
 In a terminal if you need alignment this can be a serious problem. 
