@@ -1,6 +1,6 @@
 # Haxe port of wcwidth()
 
-Following is a [Haxe](https://haxe.org) port of an implementation of wcwidth() as provided by Markus Kuhn.
+Following is a [Haxe](https://haxe.org) (for Haxe 4.0 which has Unicode support) port of an implementation of wcwidth() as provided by Markus Kuhn.
  
 ## What is this used for?
 
