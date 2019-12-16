@@ -5,7 +5,8 @@ Following is a [Haxe 4.0](https://haxe.org) port of an implementation of `mk_wcw
 ## What is this used for?
 
 When you output characters in a so-called "monospace" font (e.g. in a Terminal)
-some character instead of occupying 1 character actually occupy 2!
+some characters instead of occupying 1 character actually occupy 2! This is the case of CJK characters but also concerns others.
+
 So trying to align this:
  
 ```
@@ -17,7 +18,8 @@ b   2  (3 spaces)
 ```
  
 In a terminal if you need alignment this can be a serious problem. 
-wcwidth() comes to the rescue: 
+
+Hopefully wcwidth() comes to the rescue: 
 
 * `wcwidth("x".charCodeAt(0))` returns `1`,
 * `wcwidth("白".charCodeAt(0))` returns `2`. 
