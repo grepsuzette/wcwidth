@@ -19,11 +19,11 @@ b   2  (3 spaces)
 In a terminal if you need alignment this can be a serious problem. 
 wcwidth() comes to the rescue: 
 
-* wcwidth("x") returns 1,
-* wcwidth("白") returns 2. 
+* `wcwidth("x")` returns `1`,
+* `wcwidth("白")` returns `2`. 
 
 At least that's the basic idea. 
-Read below to discover why it sometimes return 0 or -1.
+Read below to discover why it sometimes return `0` or even `-1`.
 
 Follows a verbatim of original Stack Overflow question where found this (
 https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters).
