@@ -1,6 +1,8 @@
-Haxe port of an implementation of wcwidth() as provided by Markus Kuhn.
+# Haxe port of wcwidth()
+
+Following is a [Haxe](https://haxe.org) port of an implementation of wcwidth() as provided by Markus Kuhn.
  
-What is this used for?
+## What is this used for?
 
 When you output characters in a Monospace font (e.g. in a Terminal)
 some character instead of occupying 1 character actually occupy 2!
@@ -20,7 +22,8 @@ wcwidth() comes to the rescue:
 * wcwidth("x") returns 1,
 * wcwidth("白") returns 2. 
 
-At least that's the basic idea. Read below to discover why it sometimes return 0 or -1.
+At least that's the basic idea. 
+Read below to discover why it sometimes return 0 or -1.
 
 Follows a verbatim of original Stack Overflow question where found this (
 https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters).
