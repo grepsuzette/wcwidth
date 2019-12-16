@@ -1,0 +1,14 @@
+{
+  "name": "wcwidth",
+  "url": "https://github.com/emugel/wcwidth",
+  "license": "",
+  "tags": ["unicode", "wcwidth", "kuhn", "iso10646", "character", "terminal", "fixed", "font"],
+  "description": "Port of Markus Kuhn's wcwidth() function, to estimate space occupied by a Unicode character in a monospace font (i.e. -1, 0, 1, or 2)",
+  "version": "0.1.0",
+  "releasenote": "first release",
+  "contributors": ["emugel"],
+  "dependencies": { 
+  },
+  "classPath": "src"
+}
+
