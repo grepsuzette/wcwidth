@@ -1,6 +1,7 @@
 # Haxe port of wcwidth()
 
-Following is a [Haxe 4.0](https://haxe.org) port of an implementation of `mk_wcwidth()` as provided by Markus Kuhn.
+Following is a [Haxe 4.0](https://haxe.org) port of an implementation of `mk_wcwidth()` as provided by Markus Kuhn. 
+
  
 ## What is this used for?
 
@@ -27,10 +28,16 @@ Hopefully wcwidth() comes to the rescue:
 At least that's the basic idea. 
 Read below to discover why it sometimes return `0` or even `-1`.
 
-Follows a verbatim of original Stack Overflow question where found this (
-https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters).
+# Compatibility
 
-# How to know the preferred display width (in columns) of Unicode characters?
+For now it should work with targets using **ECS-2** (hxcpp, eval, hashlink, javascript, maybe flash, maybe others) but *not* with neko. For that we are waiting potentially for https://github.com/HaxeFoundation/haxe/pull/6748/ to be merged, maybe in Haxe 4.1. The target checks are not yet in place, feel free to contribute.
+
+# More explanations
+
+Follows a verbatim of original Stack Overflow question where found this (
+https://stackoverflow.com/questions/3634627/how-to-know-the-preferred-display-width-in-columns-of-unicode-characters), primarily so that those goods explanations are available offline in a README.
+
+## How to know the preferred display width (in columns) of Unicode characters?
 
 Sounds like you're looking for something like wcwidth and wcswidth, defined in IEEE Std 1003.1-2001, but removed from ISO C:
 
