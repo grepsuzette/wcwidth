@@ -125,7 +125,7 @@ class Wcwidth {
       if (ucs < 32 || (ucs >= 0x7f && ucs < 0xa0)) return -1;
 
       // binary search in table of non-spacing characters
-      if (_bisearch(ucs, combining, combining.length)) return 0;
+      if (_bisearch(ucs, combining, combining.length - 1)) return 0;
 
       // if we arrive here, ucs is not a combining or C0/C1 control character
       return 1 + 
