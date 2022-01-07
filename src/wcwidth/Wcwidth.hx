@@ -1,5 +1,13 @@
 package wcwidth;
 
+#if cpp
+// https://man7.org/linux/man-pages/man3/wcwidth.3.html
+@:include("wchar.h")
+extern class Wcwidth {
+    @:native("wcwidth")
+    public static function wcwidth(widechar:Int) : Int;
+}
+#else
 /**
  * Haxe port of an implementation of wcwidth() as provided by Markus Kuhn.
  *
@@ -285,4 +293,5 @@ class Wcwidth {
 
 
 }
+#end
 // vim: fdm=marker
