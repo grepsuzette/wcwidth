@@ -1,6 +1,7 @@
 -cp src
 # it won't work with neko as of 2019
 # because it doesn't use UCS-2
--js test.js
+# -js test.js
 # -hl test.hl
+-cpp cpp/wcwidth
 -main test/Test.hx
