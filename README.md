@@ -1,7 +1,7 @@
 # Haxe port of wcwidth()
 
 Following is a [Haxe 4.0](https://haxe.org) port of an implementation of `mk_wcwidth()` as provided by Markus Kuhn. 
-
+On non-windows C++ target, there an `extern` to use the original `wcwidth`. 
  
 ## What is this used for?
 

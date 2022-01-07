@@ -1,6 +1,6 @@
 package wcwidth;
 
-#if cpp
+#if (cpp && !windows)
 // https://man7.org/linux/man-pages/man3/wcwidth.3.html
 @:include("wchar.h")
 extern class Wcwidth {
