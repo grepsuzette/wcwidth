@@ -1,6 +1,6 @@
 package test;
 
-using wcwidth.Wcwidth;
+import wcwidth.Wcwidth.wcwidth;
 
 class Test {
     public static function assertEquals<T>(a:T, b:T) : Void {
@@ -8,6 +8,7 @@ class Test {
             + Std.string(a) + " differs from " + Std.string(b);
     }
 
+    // garbage stuff
     public static function utf8ToEcs2(s:String) : String {
 #if (!target.unicode)
     #if sys
@@ -31,5 +32,7 @@ class Test {
         trace("DONE");
         assertEquals("你".code, 0x4f60);
         assertEquals("你".charCodeAt(0), 0x4f60);
+        assertEquals(wcwidth("你".code), 2);
+        assertEquals(wcwidth("x".code), 1);
     }
 }
