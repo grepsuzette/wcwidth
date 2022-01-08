@@ -1,6 +1,7 @@
 package test;
 
-import wcwidth.Wcwidth.wcwidth;
+import Wcwidth.wcwidth;
+using Wclength;
 
 class Test {
     public static function assertEquals<T>(a:T, b:T) : Void {
@@ -34,5 +35,7 @@ class Test {
         assertEquals("你".charCodeAt(0), 0x4f60);
         assertEquals(wcwidth("你".code), 2);
         assertEquals(wcwidth("x".code), 1);
+        assertEquals("ありがとうございました".wclength(), 22);
+        assertEquals("♥".wclength(), 1);
     }
 }
