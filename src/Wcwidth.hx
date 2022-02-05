@@ -119,6 +119,9 @@ class Wcwidth {
      * - Spacing characters in the East Asian Wide (W) or East Asian
      *   Full-width (F) category as defined in Unicode Technical
      *   Report #11 have a column width of 2.
+     * - The Hangul Jamo Extended-B block at U+D7B0..U+D7FF contains 
+     *   jungseong and jongseong for Old Korean, and should be treated 
+     *   the same as U+1160..U+11F0 (above).
      * - All remaining characters (including all printable
      *   ISO 8859-1 and WGL4 characters, Unicode control characters,
      *   etc.) have a column width of 1.
@@ -198,6 +201,8 @@ class Wcwidth {
         { first: 0x206A, last: 0x206F },  { first: 0x20D0, last: 0x20EF }, { first: 0x302A, last: 0x302F },
         { first: 0x3099, last: 0x309A },  { first: 0xA806, last: 0xA806 }, { first: 0xA80B, last: 0xA80B },
         { first: 0xA825, last: 0xA826 },  { first: 0xFB1E, last: 0xFB1E }, { first: 0xFE00, last: 0xFE0F },
+        { first: 0xD7B0, last: 0xD7C6 },  
+        { first: 0xD7CB, last: 0xD7FB },  
         { first: 0xFE20, last: 0xFE23 },  { first: 0xFEFF, last: 0xFEFF }, { first: 0xFFF9, last: 0xFFFB },
         // note: these probably will be useless in UCS-2
         { first: 0x10A01,last: 0x10A03 }, { first: 0x10A05,last: 0x10A06 }, { first: 0x10A0C, last: 0x10A0F },
