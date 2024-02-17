@@ -37,5 +37,7 @@ class Test {
         assertEquals(wcwidth("x".code), 1);
         assertEquals("ありがとうございました".wclength(), 22);
         assertEquals("♥".wclength(), 1);
+        assertEquals("abc".wclength(), 3);
+        assertEquals("自治区".wclength(), 6);
     }
 }
