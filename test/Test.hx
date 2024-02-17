@@ -39,5 +39,8 @@ class Test {
         assertEquals("♥".wclength(), 1);
         assertEquals("abc".wclength(), 3);
         assertEquals("自治区".wclength(), 6);
+        assertEquals("自治区".wcrpad("x", 10), "自治区xxxx");
+        assertEquals("自治区".wclpad("x", 10), "xxxx自治区");
+
     }
 }
